@@ -1,0 +1,6 @@
+def count_it(sequence):
+    num_frequency = {int(item): sequence.count(item) for item in sequence}
+    sorted_num_frequency = sorted(num_frequency.items(), key=lambda element: element[1])
+    return dict(sorted_num_frequency[-3:])
+
+print(count_it('1111111111222'))
